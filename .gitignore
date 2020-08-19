@@ -1,3 +1,8 @@
-./node_modules
-./frontend/node_modules
-./Backend/node_modules
+node_modules
+frontend/node_modules
+Backend/node_modules
+Backend/.nyc_output
+frontend/README.md
+frontend/package-lock.json
+.vscode/
+Backend/package-lock.json
