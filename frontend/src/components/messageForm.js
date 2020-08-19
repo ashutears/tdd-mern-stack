@@ -1,35 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
+import MessageList from './messageList'
 
-class MessageForm extends React.Component {
+function MessageForm(props) {
+    
+    const [currentMessage, setCurrentMessage] = useState('')
 
-    constructor() {
-        super()
-
-        this.state = {
-            currentMessage: ''
-        }
-    }
-
-    changeMessageValue(change) {
-        this.setState({
-            currentMessage: change
-        })
-    }
-
-    render() {
-        return (
-            <form id='message_form'>
-                
-                <textarea 
-                    id = "message_box" 
-                    onChange={(e) => this.changeMessageValue(e.target.value)}
-                    value={this.state.currentMessage}
-                > </textarea>
-
-                <button name = "submit"id = "submit" > </button>
-            </form>
-        )
-    }
+    return (
+        <form id='message_form'>
+            
+            <textarea 
+                id = "message_box" 
+                onChange={(e) => setCurrentMessage(e.target.value)}
+                value={currentMessage}
+            > </textarea>
+    
+            <button name = "submit"id = "submit" > </button>
+        </form>
+    )
 }
 
 export default MessageForm
