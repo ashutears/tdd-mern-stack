@@ -11,7 +11,7 @@ function getAll() {
 
     return new Promise((resolve, reject) => {
         var result = messageApp.getAll()
-
+        
         if(result !== []) {
             resolve(result)
         } else {
@@ -23,6 +23,7 @@ function getAll() {
 function post(data) {
 
     return new Promise((resolve, reject) => {
+        console.log('here')
         var result = messageApp.post(data)
 
         if (result !== []) {

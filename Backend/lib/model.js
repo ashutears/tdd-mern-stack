@@ -7,13 +7,13 @@ function newID(items) {
     return 1;
 }
 
-const fs = require('fs')
+const fs = require('fs');
 
 class MessageApp {
 
     constructor(srcFile=null) {
         this.sourceFile = srcFile
-        this.messages = srcFile ? this.readFromJson() : []
+        this.messages = this.sourceFile ? this.readFromJson() : []
     }
 
     readFromJson() {
