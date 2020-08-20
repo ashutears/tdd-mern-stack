@@ -25,7 +25,7 @@ describe('Message List', () => {
 
         expect(component.exists('li.a-message')).toBe(true)
         expect(component.find('li.a-message').length).toEqual(1)
-        console.log(component.find('li.a-message'))
+        
         expect(component.find('li.a-message').first().props().children).toContain('test message')
 
     })

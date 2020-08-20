@@ -21,7 +21,7 @@ describe("message API endpoint tests", () => {
     })
 
     it ("posts a message", (done) => {
-        let data = {content: 'hi world'}
+        let data = {message: 'hi world'}
 
         const res = request(app)
             .post('/message')
