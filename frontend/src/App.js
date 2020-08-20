@@ -34,12 +34,17 @@ function App(props) {
 
   const addMessageAction = async (e, message) => {
     e.preventDefault()
-    if (! message) return false
 
+    if (! message) return false
+    
     const postRequestOptions = {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(message)
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+
+        body: JSON.stringify({message: message})
     }
     
     await fetch('http://localhost:3001/message', postRequestOptions)

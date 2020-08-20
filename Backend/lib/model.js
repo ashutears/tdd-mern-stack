@@ -34,7 +34,7 @@ class MessageApp {
         if (content === undefined || content.length === 0) return 'Empty string cannot be a message'
         let item = {
             id: newID(this.messages),
-            content: content, 
+            content: content,
             date: new Date()
         }
 

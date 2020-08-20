@@ -12,7 +12,8 @@ routes.get('/', async (req, res) => {
 })
 
 routes.post('/message', async (req, res) => {
-    await messageApp.post(req.body.content)
+
+    await messageApp.post(req.body.message)
         .then((messages) => res.json(messages))
         .catch((err) => res.status(404).json(err))
 })
